@@ -66,6 +66,7 @@ class CustomControl: UIControl {
             if labelArray[i].frame.contains(touch.location(in: self)) {
                 if value != labelArray[i].tag {
                     value = labelArray[i].tag
+                    sendActions(for: .valueChanged)
                     updateColors(for: labelArray[i].tag)
                 }
             }
